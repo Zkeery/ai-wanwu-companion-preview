@@ -21,7 +21,7 @@
       <p class="scope">本页展示已采用的3D风格形象和动作。聊天、上传生成、短信登录与后台生活尚未接入这个在线演示。</p>
     </section>
     <section class="companion" aria-label="蔓蔓动作播放器">
-      <div class="stage"><span class="stage-caption">MANMAN</span><div id="sprite" class="sprite rest" role="img" aria-label="蔓蔓正在休息"></div><div class="ground"></div></div>
+      <div class="stage" aria-busy="true"><span class="stage-caption">MANMAN</span><div id="sprite" class="sprite loading" role="img" aria-label="蔓蔓休息动作加载中"></div><div class="ground"></div><p id="load-status" role="status">正在加载休息动作…</p></div>
       <div class="controls">
         <div class="activities" role="group" aria-label="选择动作">
           <button type="button" data-activity="rest" aria-pressed="true">休息</button>
@@ -29,6 +29,7 @@
           <button type="button" data-activity="observe" aria-pressed="false">观察</button>
         </div>
         <button id="toggle" class="toggle" type="button" aria-pressed="false">暂停播放</button>
+        <button id="retry" class="toggle" type="button" hidden>重新加载</button>
         <p id="description" aria-live="polite">闭上眼睛，慢慢放松。</p>
       </div>
     </section>
